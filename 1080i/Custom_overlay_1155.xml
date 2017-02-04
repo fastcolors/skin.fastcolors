@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1154">
     <defaultcontrol>-</defaultcontrol>
-    <visible>Player.HasVideo</visible>
+    <visible>Player.HasVideo + VideoPlayer.IsFullscreen</visible>
     <controls>
         <control type="image">
             <left>60</left>
