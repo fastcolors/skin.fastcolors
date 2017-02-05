@@ -7,12 +7,13 @@
     <include>HomeOpenClose</include>
     <controls>
         <include>BlackBackground</include>
-        <!--CLONING-->
-        <!--<control type="image">-->
-        <!--<height>1080</height>-->
-        <!--<width>1920</width>-->
-        <!--<texture>atv.png</texture>-->
-        <!--</control>-->
+        <control type="image">
+            <height>720</height>
+            <width>1920</width>
+            <texture>fastcolors.png</texture>
+            <aspectratio>scale</aspectratio>
+            <colordiffuse>06ffffff</colordiffuse>
+        </control>
         <control type="group" description="Furniture">
             <include>homeanimation</include>
             <control type="image" description="banda bianca">

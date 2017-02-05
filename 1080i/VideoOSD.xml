@@ -22,37 +22,26 @@
                 <animation effect="fade" end="100" time="400">Visible</animation>
                 <animation effect="fade" end="0" time="100">Hidden</animation>
                 <control type="group">
-                    <control type="group" description="Dialog Background">
-                        <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
-                        <control type="image">
-                            <left>35</left>
-                            <top>888</top>
-                            <width>1850</width>
-                            <height>150</height>
-                            <aspectratio>stretch</aspectratio>
-                            <texture border="8" colordiffuse="osdoverlay">images/White.png</texture>
-                        </control>
-                    </control>
                     <control type="label" description="Title">
-                        <left>120</left>
                         <bottom>120</bottom>
                         <height>60</height>
-                        <width>940</width>
+                        <width>1920</width>
                         <scroll>true</scroll>
                         <font>size33B</font>
+                        <align>center</align>
                         <label>[B]$INFO[VideoPlayer.Title][/B]</label>
                     </control>
                 </control>
                 <control type="grouplist" id="100">
-                    <right>100</right>
-                    <bottom>100</bottom>
+                    <centerleft>960</centerleft>
+                    <bottom>20</bottom>
                     <onright>100</onright>
                     <onleft>100</onleft>
                     <onup>101</onup>
                     <ondown>101</ondown>
-                    <width>700</width>
-                    <height>100</height>
-                    <align>right</align>
+                    <width>1920</width>
+                    <height>80</height>
+                    <align>center</align>
                     <orientation>horizontal</orientation>
                     <control type="button" id="1">
                         <include>osdbutton</include>
