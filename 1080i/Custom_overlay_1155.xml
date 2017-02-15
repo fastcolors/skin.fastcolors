@@ -9,7 +9,7 @@
             <width>375</width>
             <height>150</height>
             <texture>logo_fast_video.png</texture>
-            <colordiffuse>aaffffff</colordiffuse>
+            <colordiffuse>76ffffff</colordiffuse>
             <aspectratio>keep</aspectratio>
         </control>
         <control type="image">
@@ -18,8 +18,19 @@
             <width>375</width>
             <height>150</height>
             <aspectratio>keep</aspectratio>
-            <colordiffuse>99ffffff</colordiffuse>
+            <colordiffuse>76ffffff</colordiffuse>
             <texture background="true">$INFO[Player.Art(clearlogo)]</texture>
+        </control>
+        <control type="label">
+            <top>30</top>
+            <right>60</right>
+            <width>375</width>
+            <height>200</height>
+            <align>right</align>
+            <aligny>top</aligny>
+            <font>shelf</font>
+            <textcolor>76ffffff</textcolor>
+            <label>$INFO[Player.Title][CR]$INFO[VideoPlayer.Artist][CR]$INFO[VideoPlayer.Year]</label>
         </control>
     </controls>
 </window>
