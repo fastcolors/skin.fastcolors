@@ -4,17 +4,6 @@
     <include>DialogOpenClose</include>
     <controls>
         <control type="image">
-            <visible>!Skin.HasTheme(Dark)</visible>
-            <centerleft>960</centerleft>
-            <centertop>540</centertop>
-            <width>1320</width>
-            <height>1040</height>
-            <colordiffuse>ff999999</colordiffuse>
-            <texture>special://skin/backdrops/light_default_background.png</texture>
-            <aspectratio align="center">scale</aspectratio>
-        </control>
-        <control type="image">
-            <visible>Skin.HasTheme(Dark)</visible>
             <centerleft>960</centerleft>
             <centertop>540</centertop>
             <width>1320</width>
