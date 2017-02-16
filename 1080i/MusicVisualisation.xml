@@ -1,62 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol></defaultcontrol>
+    <onload>RunScript(script.artistslideshow)</onload>
     <allowoverlay>no</allowoverlay>
     <controls>
         <include>BlackBackground</include>
-        <control type="image">
+        <control type="multiimage">
             <include>Dimensions_Fullscreen</include>
-            <colordiffuse>55404040</colordiffuse>
-            <texture>$INFO[Player.Art(fanart)]</texture>
+            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+            <aspectratio>keep</aspectratio>
+            <timeperimage>10000</timeperimage>
+            <fadetime>1200</fadetime>
+            <colordiffuse>66404040</colordiffuse>
+            <randomize>true</randomize>
         </control>
-        <control type="group">
-            <control type="visualisation" id="2">
-                <centerleft>960</centerleft>
-                <top>780</top>
-                <width>400</width>
-                <height>200</height>
+        <control type="grouplist">
+            <orientation>horizontal</orientation>
+            <centerleft>960</centerleft>
+            <top>830</top>
+            <width>1920</width>
+            <align>center</align>
+            <itemgap>20</itemgap>
+            <control type="image">
+                <width>68</width>
+                <height>140</height>
+                <texture>logo_fast.png</texture>
+                <colordiffuse>99ffffff</colordiffuse>
+                <aspectratio>keep</aspectratio>
             </control>
-            <control type="group">
-                <visible>!Window.IsVisible(musicosd)</visible>
-                <centerleft>960</centerleft>
-                <top>170</top>
-                <width>540</width>
-                <animation condition="true" effect="zoom" center="auto" end="105" reversible="false">Conditional</animation>
-                <control type="image">
-                    <width>540</width>
-                    <height>540</height>
-                    <texture>$INFO[MusicPlayer.Cover]</texture>
-                </control>
-                <control type="label">
-                    <top>550</top>
-                    <height>40</height>
-                    <width>540</width>
-                    <align>center</align>
-                    <font>size30B</font>
-                    <label>$INFO[MusicPlayer.Title]</label>
-                </control>
-                <control type="textbox">
-                    <top>590</top>
-                    <height>60</height>
-                    <width>540</width>
-                    <align>center</align>
-                    <font>font12</font>
-                    <label>[B]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, -- ][/B]</label>
-                </control>
+            <control type="label">
+                <width>1000</width>
+                <height>140</height>
+                <font>size212_fast</font>
+                <alingy>bottom</alingy>
+                <textcolor>99ffffff</textcolor>
+                <label>FASTCOLORS STUDIO</label>
             </control>
-            <control type="progress" description="Progress Bar">
-                <top>990</top>
-                <left>110</left>
-                <width>1700</width>
-                <height>10</height>
-                <reveal>true</reveal>
-                <texturebg border="4">Seekbar/ProgressBG.png</texturebg>
-                <lefttexture border="4">Seekbar/ProgressL.png</lefttexture>
-                <midtexture>Seekbar/ProgressM.png</midtexture>
-                <righttexture border="4">Seekbar/ProgressR.png</righttexture>
-                <info>Player.Progress</info>
-                <visible>true</visible>
+            <control type="image">
+                <width>68</width>
+                <height>140</height>
+                <texture>logo_fast.png</texture>
+                <colordiffuse>99ffffff</colordiffuse>
+                <aspectratio>keep</aspectratio>
             </control>
+        </control>
+        <!--<control type="grouplist" id="666" description="fakecontrol">-->
+        <!--<orientation>horizontal</orientation>-->
+        <!--<top>200</top>-->
+        <!--<centerleft>960</centerleft>-->
+        <!--<align>center</align>-->
+        <!--<width>1920</width>-->
+        <!--<onup>noop</onup>-->
+        <!--<ondown>102</ondown>-->
+        <!--<onright>noop</onright>-->
+        <!--<onleft>noop</onleft>-->
+        <!--<itemgap>30</itemgap>-->
+        <!--<control type="button" id="100">-->
+        <!--<enable>MusicPlayer.HasPrevious</enable>-->
+        <!--<width>540</width>-->
+        <!--<height>540</height>-->
+        <!--<texturefocus>-</texturefocus>-->
+        <!--<onclick>Playlist.PlayOffset(-1)</onclick>-->
+        <!--<onclick>right</onclick>-->
+        <!--</control>-->
+        <!--<control type="button" id="200">-->
+        <!--<width>600</width>-->
+        <!--<height>600</height>-->
+        <!--<texturefocus>-</texturefocus>-->
+        <!--</control>-->
+        <!--<control type="button" id="300">-->
+        <!--<enable>MusicPlayer.HasNext</enable>-->
+        <!--<width>540</width>-->
+        <!--<height>540</height>-->
+        <!--<texturefocus>-</texturefocus>-->
+        <!--<onclick>Playlist.PlayOffset(1)</onclick>-->
+        <!--<onclick>left</onclick>-->
+        <!--</control>-->
+        <!--</control>-->
+        <!--<control type="grouplist" id="777">-->
+        <!--<orientation>horizontal</orientation>-->
+        <!--<top>160</top>-->
+        <!--<centerleft>960</centerleft>-->
+        <!--<align>center</align>-->
+        <!--<width>1920</width>-->
+        <!--<itemgap>50</itemgap>-->
+        <!--<control type="group">-->
+        <!--<width>540</width>-->
+        <!--<animation condition="!Control.HasFocus(102) + Container(666).Position(0)" effect="zoom" center="300,270" start="100" end="105" time="150" tween="Back" easing="Out">Conditional</animation>-->
+        <!--<animation condition="Control.HasFocus(102) | !Container(666).Position(0)" effect="zoom" start="105" end="100" time="120" center="300,270" >Conditional</animation>-->
+        <!--<control type="image">-->
+        <!--<width>540</width>-->
+        <!--<height>540</height>-->
+        <!--<texture>$INFO[MusicPlayer.offset(-1).Cover]</texture>-->
+        <!--</control>-->
+        <!--<control type="label">-->
+        <!--<top>550</top>-->
+        <!--<height>40</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>size30B</font>-->
+        <!--<label>$INFO[MusicPlayer.offset(-1).Title]</label>-->
+        <!--</control>-->
+        <!--<control type="textbox">-->
+        <!--<top>590</top>-->
+        <!--<height>60</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>font12</font>-->
+        <!--<label>[B]$INFO[MusicPlayer.offset(-1).Artist]$INFO[MusicPlayer.offset(-1).Album, &#45;&#45; ][/B]</label>-->
+        <!--</control>-->
+        <!--</control>-->
+        <!--<control type="group">-->
+        <!--<width>540</width>-->
+        <!--<animation condition="!Control.HasFocus(102) + Container(666).Position(1)" effect="zoom" center="300,270" start="100" end="105" time="150" tween="Back" easing="Out">Conditional</animation>-->
+        <!--<animation condition="Control.HasFocus(102) | !Container(666).Position(1)" effect="zoom" center="300,270" start="105" end="100" time="120" >Conditional</animation>-->
+        <!--<control type="image">-->
+        <!--<width>540</width>-->
+        <!--<height>540</height>-->
+        <!--<texture>$INFO[MusicPlayer.Cover]</texture>-->
+        <!--</control>-->
+        <!--<control type="label">-->
+        <!--<top>550</top>-->
+        <!--<height>40</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>size30B</font>-->
+        <!--<label>$INFO[MusicPlayer.Title]</label>-->
+        <!--</control>-->
+        <!--<control type="textbox">-->
+        <!--<top>590</top>-->
+        <!--<height>60</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>font12</font>-->
+        <!--<label>[B]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, &#45;&#45; ][/B]</label>-->
+        <!--</control>-->
+        <!--</control>-->
+        <!--<control type="group">-->
+        <!--<width>540</width>-->
+        <!--<animation condition="!Control.HasFocus(102) + Container(666).Position(2)" effect="zoom" center="300,270" start="100" end="105" time="150" tween="Back" easing="Out">Conditional</animation>-->
+        <!--<animation condition="Control.HasFocus(102) | !Container(666).Position(2)" effect="zoom" start="105" end="100" time="120" center="300,270" >Conditional</animation>-->
+        <!--<control type="image">-->
+        <!--<width>540</width>-->
+        <!--<height>540</height>-->
+        <!--<texture>$INFO[MusicPlayer.offset(1).Cover]</texture>-->
+        <!--</control>-->
+        <!--<control type="label">-->
+        <!--<top>550</top>-->
+        <!--<height>40</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>size30B</font>-->
+        <!--<label>$INFO[MusicPlayer.offset(1).Title]</label>-->
+        <!--</control>-->
+        <!--<control type="textbox">-->
+        <!--<top>590</top>-->
+        <!--<height>60</height>-->
+        <!--<width>540</width>-->
+        <!--<align>center</align>-->
+        <!--<font>font12</font>-->
+        <!--<label>[B]$INFO[MusicPlayer.offset(1).Artist]$INFO[MusicPlayer.offset(1).Album, &#45;&#45; ][/B]</label>-->
+        <!--</control>-->
+        <!--</control>-->
+        <!--</control>-->
+        <control type="progress" description="Progress Bar">
+            <top>990</top>
+            <left>110</left>
+            <width>1700</width>
+            <height>10</height>
+            <reveal>true</reveal>
+            <texturebg border="4">Seekbar/ProgressBG.png</texturebg>
+            <lefttexture border="4">Seekbar/ProgressL.png</lefttexture>
+            <midtexture>Seekbar/ProgressM.png</midtexture>
+            <righttexture border="4">Seekbar/ProgressR.png</righttexture>
+            <info>Player.Progress</info>
+            <visible>true</visible>
+        </control>
+        <control type="label">
+            <centerleft>960</centerleft>
+            <width>1920</width>
+            <width>1920</width>
+            <height>90</height>
+            <font>size60B</font>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[Player.Title]$INFO[MusicPlayer.Artist, • ]</label>
         </control>
     </controls>
 </window>
