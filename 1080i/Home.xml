@@ -3,17 +3,16 @@
     <backgroundcolor>background</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;level=1)</onload>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;level=0)</onload>
     <include>HomeOpenClose</include>
     <controls>
         <include>BlackBackground</include>
-        <control type="image">
-            <height>720</height>
-            <width>1920</width>
-            <texture>fastcolors.png</texture>
-            <aspectratio>scale</aspectratio>
-            <colordiffuse>06ffffff</colordiffuse>
-        </control>
+        <!--CLONING-->
+        <!--<control type="image">-->
+        <!--<height>1080</height>-->
+        <!--<width>1920</width>-->
+        <!--<texture>atv.png</texture>-->
+        <!--</control>-->
         <control type="group" description="Furniture">
             <include>homeanimation</include>
             <control type="image" description="banda bianca">
@@ -202,7 +201,10 @@
             <include>Music</include>
             <include>Addons</include>
             <include>Episodes</include>
+            <include>Favourites</include>
+            <include>Livetv</include>
             <include>appstore_shelf</include>
+            <include>general</include>
             <include>weather_shelf</include>
         </control>
         <control type="group" description="RSS">

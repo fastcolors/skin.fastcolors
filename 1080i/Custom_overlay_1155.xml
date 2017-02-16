@@ -22,6 +22,7 @@
             <texture background="true">$INFO[Player.Art(clearlogo)]</texture>
         </control>
         <control type="label">
+            <visible>String.IsEmpty(Player.Art(clearlogo))</visible>
             <top>30</top>
             <right>60</right>
             <width>375</width>
