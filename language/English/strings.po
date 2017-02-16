@@ -102,6 +102,14 @@ msgctxt "#31026"
 msgid "Arial based"
 msgstr "Arial based"
 
+msgctxt "#31027"
+msgid "Party Mode Movies"
+msgstr "Party Mode Movies"
+
+msgctxt "#31028"
+msgid "Party Mode Music Videos"
+msgstr "Party Mode Music Videos"
+
 msgctxt "#31029"
 msgid "Favourite"
 msgstr "Favourite"

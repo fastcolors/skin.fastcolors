@@ -1,6 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
     <shortcut>
+        <defaultID>music</defaultID>
+        <label>589</label>
+        <icon>-</icon>
+        <label2>-</label2>
+        <thumb>icons/DVD.png</thumb>
+        <action>PlayerControl(Partymode)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>movies</defaultID>
+        <label>31027</label>
+        <icon>-</icon>
+        <label2>-</label2>
+        <thumb>icons/extendedinfotheater.png</thumb>
+        <action>PLayMedia(special://skin/playlists/Auto_Movies.xsp)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>movies</defaultID>
+        <label>31028</label>
+        <icon>-</icon>
+        <label2>-</label2>
+        <thumb>icons/purple.png</thumb>
+        <action>PLayMedia(special://skin/playlists/Auto_Music_Videos.xsp)</action>
+    </shortcut>
+    <shortcut>
         <defaultID>movies</defaultID>
         <label>342</label>
         <icon>-</icon>
