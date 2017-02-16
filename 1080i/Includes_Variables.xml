@@ -88,6 +88,7 @@
     </variable>
 
     <variable name="musicshelf">
+        <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)">special://skin/playlists/Auto_Music_Videos.xsp</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + String.IsEqual(Skin.String(musicshelf),artists) + Library.HasContent(Music)">special://skin/playlists/random_albums.xsp</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + String.IsEqual(Skin.String(musicshelf),albums) + Library.HasContent(Music)">musicdb://recentlyplayedalbums/</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music) + Library.HasContent(Music)">musicdb://recentlyaddedalbums/</value>

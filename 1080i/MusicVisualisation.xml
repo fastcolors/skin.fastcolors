@@ -8,7 +8,6 @@
         <control type="multiimage">
             <include>Dimensions_Fullscreen</include>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-            <aspectratio>keep</aspectratio>
             <timeperimage>10000</timeperimage>
             <fadetime>1200</fadetime>
             <colordiffuse>66404040</colordiffuse>
@@ -17,7 +16,7 @@
         <control type="grouplist">
             <orientation>horizontal</orientation>
             <centerleft>960</centerleft>
-            <top>830</top>
+            <top>850</top>
             <width>1920</width>
             <align>center</align>
             <itemgap>20</itemgap>
@@ -164,7 +163,7 @@
         <!--</control>-->
         <!--</control>-->
         <control type="progress" description="Progress Bar">
-            <top>990</top>
+            <top>1010</top>
             <left>110</left>
             <width>1700</width>
             <height>10</height>
@@ -184,6 +183,7 @@
             <font>size60B</font>
             <align>center</align>
             <aligny>center</aligny>
+            <textcolor>99ffffff</textcolor>
             <label>$INFO[Player.Title]$INFO[MusicPlayer.Artist, • ]</label>
         </control>
     </controls>

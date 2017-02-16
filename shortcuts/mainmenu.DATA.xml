@@ -17,7 +17,7 @@
         <action>PLayMedia(special://skin/playlists/Auto_Movies.xsp)</action>
     </shortcut>
     <shortcut>
-        <defaultID>movies</defaultID>
+        <defaultID>musicvideos</defaultID>
         <label>31028</label>
         <icon>-</icon>
         <label2>-</label2>
