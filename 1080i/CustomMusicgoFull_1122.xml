@@ -2,6 +2,6 @@
 <window type="dialog" id="1122">
   <allowoverlay>no</allowoverlay>
   <onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
-  <visible>!Window.IsActive(home) + Player.HasAudio + System.IdleTime(8)</visible>
+  <visible>Player.HasAudio + System.IdleTime(5)</visible>
   <controls></controls>
 </window>

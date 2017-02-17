@@ -39,7 +39,7 @@
     <control type="label" description="Heading">
       <visible>!Control.IsVisible(53)</visible>
       <include>Heading</include>
-      <label>$VAR[RootLabel][COLOR=gray]$INFO[Container.NumItems,  (,)][/COLOR]</label>
+      <label>$LOCALIZE[0][COLOR=gray]$INFO[Container.NumItems,  (,)][/COLOR]</label>
     </control>
   </controls>
 </window>

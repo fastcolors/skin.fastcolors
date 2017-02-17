@@ -197,9 +197,8 @@
                 <control type="label" id="7777" description="Heading">
                     <width min="60" max="930">auto</width>
                     <height>75</height>
-                    <textcolor>White2</textcolor>
                     <font>size42</font>
-                    <label>$VAR[RootLabel]</label>
+                    <label>$LOCALIZE[1]</label>
                 </control>
                 <control type="label" description="Number of files">
                     <visible>!String.IsEmpty(Control.GetLabel(7777))</visible>
@@ -216,7 +215,7 @@
                 <width>1200</width>
                 <textcolor>whitesmoke</textcolor>
                 <include>Genre51Commons</include>
-                <label>$INFO[ListItem.label][COLOR=gray]$VAR[TopLabel,  ][/COLOR]</label>
+                <label>$INFO[ListItem.label][COLOR=gray]$INFO[ListItem.Date, • ]$INFO[ListItem.Size, • ][/COLOR]</label>
             </control>
         </control>
         <control type="group" description="Side menu 9000 group">
