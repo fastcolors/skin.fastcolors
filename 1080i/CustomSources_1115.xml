@@ -9,13 +9,13 @@
                 <centerleft>960</centerleft>
                 <centertop>540</centertop>
                 <width>802</width>
-                <height>520</height>
+                <height>600</height>
                 <aspectratio>stretch</aspectratio>
                 <texture border="50">images/ContextMenu.png</texture>
                 <colordiffuse>dialog</colordiffuse>
             </control>
             <control type="grouplist" id="9000">
-                <height>400</height>
+                <height>480</height>
                 <centertop>540</centertop>
                 <align>center</align>
                 <include>DialogGLs</include>
@@ -38,12 +38,12 @@
                     <onclick>Close</onclick>
                     <onclick>UpdateLibrary(video,,true)</onclick>
                 </control>
-                <control type="button" id="705" description="Update Library">
+                <control type="button" id="705" description="Clean Library">
                     <enable>Library.HasContent(Movies) | Library.HasContent(TVShows)</enable>
                     <include>DialogButt</include>
                     <label>334</label>
                     <onclick>Close</onclick>
-                    <onclick>CleanLibrary(video,true)</onclick>
+                    <onclick>CleanLibrary(video)</onclick>
                 </control>
                 <control type="button" id="706">
                     <include>DialogButt</include>
