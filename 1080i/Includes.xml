@@ -132,15 +132,17 @@
         </control>
         <!--todo Playing infos-->
         <control type="group" description="Player Info">
-            <visible>!Control.HasFocus(340) + Player.HasMedia + ![Window.IsActive(DialogBusy.xml) | Window.IsActive(VideoFullscreen.xml) | Window.IsActive(myPVR.xml)]</visible>
+            <visible>Player.HasMedia + ![Window.IsActive(DialogBusy.xml) | Window.IsActive(VideoFullscreen.xml) | Window.IsActive(myPVR.xml)]</visible>
             <visible>!IntegerGreaterThan(Player.Time,8) | !IntegerGreaterThan(Player.TimeRemaining,8)</visible>
             <include>VisibleFade</include>
-            <left>15</left>
-            <top>960</top>
-            <control type="image" description="Playing BG">
-                <width>390</width>
-                <height>105</height>
-                <texture border="8">images/White.png</texture>
+            <left>1325</left>
+            <top>55</top>
+            <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+            <control type="image" description="Dialog BG">
+                <width>520</width>
+                <height>130</height>
+                <texture border="8" colordiffuse="notification">images/White.png</texture>
             </control>
             <control type="group">
                 <control type="image">

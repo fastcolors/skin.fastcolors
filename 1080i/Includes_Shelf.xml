@@ -321,7 +321,7 @@
         <control type="panel" id="312" description="Music Shelf Shortcuts">
             <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music) | String.IsEqual(Container(9000).ListItem.Property(defaultID),musicvideos)</visible>
             <include>SquareShortcutsCommons</include>
-            <onclick>PlayMedia($ESCINFO[ListItem.DBID,musicdb://albums/,/])</onclick>
+            <onclick condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),music)">PlayMedia($ESCINFO[ListItem.DBID,musicdb://albums/,/])</onclick>
             <content target="audio">$VAR[musicshelf]</content>
         </control>
     </include>
@@ -561,5 +561,4 @@
             </control>
         </control>
     </include>
-
 </includes>
