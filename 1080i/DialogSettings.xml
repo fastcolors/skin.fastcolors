@@ -43,6 +43,11 @@
                 <align>left</align>
                 <radioleft>1020</radioleft>
             </control>
+            <control type="sliderex" id="13">
+                <texturefocus border="8">images/White.png</texturefocus>
+                <!--<texturenofocus border="8" colordiffuse="77FFFFFF">images/White.png</texturenofocus>-->
+                <width>900</width>
+            </control>
             <control type="grouplist" id="9000">
                 <top>190</top>
                 <left>1285</left>
