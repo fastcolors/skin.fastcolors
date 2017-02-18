@@ -56,7 +56,6 @@
                 <width>195</width>
                 <height>30</height>
                 <label>$INFO[Player.Time]</label>
-                <textcolor>lightgray</textcolor>
                 <shadowcolor>black</shadowcolor>
                 <font>size26</font>
             </control>
@@ -67,7 +66,6 @@
                 <width>195</width>
                 <align>right</align>
                 <label>- $INFO[Player.TimeRemaining]</label>
-                <textcolor>lightgray</textcolor>
                 <shadowcolor>black</shadowcolor>
                 <font>size26</font>
             </control>

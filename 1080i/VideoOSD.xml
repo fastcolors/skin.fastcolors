@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
-    <defaultcontrol always="true">100</defaultcontrol>
+    <defaultcontrol always="true">7</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <zorder>2</zorder>
     <controls>
@@ -21,79 +21,30 @@
                 <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
                 <animation effect="fade" end="100" time="400">Visible</animation>
                 <animation effect="fade" end="0" time="100">Hidden</animation>
-                <control type="group">
-                    <control type="group" description="Dialog Background">
-                        <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
-                        <control type="image">
-                            <left>35</left>
-                            <top>888</top>
-                            <width>1850</width>
-                            <height>150</height>
-                            <aspectratio>stretch</aspectratio>
-                            <texture border="8" colordiffuse="osdoverlay">images/White.png</texture>
-                        </control>
-                    </control>
-                    <control type="label" description="Title">
-                        <left>120</left>
-                        <bottom>120</bottom>
-                        <height>60</height>
-                        <width>940</width>
-                        <scroll>true</scroll>
-                        <font>size33B</font>
-                        <label>[B]$INFO[VideoPlayer.Title][/B]</label>
-                    </control>
-                </control>
                 <control type="grouplist" id="100">
-                    <right>100</right>
-                    <bottom>100</bottom>
+                    <centerleft>960</centerleft>
+                    <bottom>0</bottom>
                     <onright>100</onright>
                     <onleft>100</onleft>
                     <onup>101</onup>
                     <ondown>101</ondown>
                     <width>700</width>
                     <height>100</height>
-                    <align>right</align>
+                    <align>center</align>
                     <orientation>horizontal</orientation>
-                    <control type="button" id="1">
+                    <control type="button" id="3">
                         <include>osdbutton</include>
                         <texturenofocus colordiffuse="dimgray">Seekbar/OSDPrevious.png</texturenofocus>
                         <texturefocus>Seekbar/OSDPrevious.png</texturefocus>
-                        <visible>!Pvr.IsPlayingTV</visible>
                         <onclick>PlayerControl(Previous)</onclick>
                     </control>
-                    <control type="button" id="2">
-                        <include>osdbutton</include>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDup.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDup.png</texturefocus>
-                        <visible>Pvr.IsPlayingTV</visible>
-                        <onclick>PlayerControl(Previous)</onclick>
-                    </control>
-                    <control type="button" id="3">
-                        <include>osdbutton</include>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDdown.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDdown.png</texturefocus>
-                        <visible>Pvr.IsPlayingTV</visible>
-                        <onclick>PlayerControl(Next)</onclick>
-                    </control>
-                    <control type="button" id="4">
-                        <include>osdbutton</include>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDRW.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDRW.png</texturefocus>
-                        <visible>!Pvr.IsPlayingTV</visible>
-                        <onclick>PlayerControl(Rewind)</onclick>
-                    </control>
-                    <control type="button" id="5">
-                        <include>osdbutton</include>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDPause.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDPause.png</texturefocus>
-                        <visible>!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Pvr.IsPlayingTV</visible>
-                        <onclick>PlayerControl(Play)</onclick>
-                    </control>
-                    <control type="button" id="6">
+                    <control type="togglebutton" id="6">
                         <include>osdbutton</include>
                         <texturenofocus colordiffuse="dimgray">Seekbar/OSDPlay.png</texturenofocus>
                         <texturefocus>Seekbar/OSDPlay.png</texturefocus>
-                        <visible>Player.Paused | Player.Forwarding | Player.Rewinding + !Pvr.IsPlayingTV</visible>
+                        <alttexturenofocus colordiffuse="dimgray">Seekbar/OSDPause.png</alttexturenofocus>
+                        <alttexturefocus>Seekbar/OSDPause.png</alttexturefocus>
+                        <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding + !Pvr.IsPlayingTV</usealttexture>
                         <onclick>PlayerControl(Play)</onclick>
                     </control>
                     <control type="button" id="7">
@@ -102,54 +53,12 @@
                         <texturefocus>Seekbar/OSDStop.png</texturefocus>
                         <onclick>PlayerControl(Stop)</onclick>
                     </control>
-                    <control type="button" id="8">
-                        <include>osdbutton</include>
-                        <visible>Pvr.IsPlayingTv</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDchn.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDchn.png</texturefocus>
-                        <onclick>PlayerControl(PVROSDChannels)</onclick>
-                    </control>
-                    <control type="button" id="9">
-                        <include>osdbutton</include>
-                        <visible>Pvr.IsPlayingTv</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDpvr.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDpvr.png</texturefocus>
-                        <onclick>PlayerControl(PVROSDGuide)</onclick>
-                    </control>
-                    <control type="button" id="10">
-                        <include>osdbutton</include>
-                        <visible>Pvr.IsPlayingTv</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDtxt.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDtxt.png</texturefocus>
-                        <onclick>PlayerControl(Teletext)</onclick>
-                    </control>
-                    <control type="button" id="11">
-                        <include>osdbutton</include>
-                        <visible>!Pvr.IsPlayingTv</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDFW.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDFW.png</texturefocus>
-                        <onclick>PlayerControl(Forward)</onclick>
-                    </control>
                     <control type="button" id="12">
                         <include>osdbutton</include>
                         <visible>!Pvr.IsPlayingTv</visible>
                         <texturenofocus colordiffuse="dimgray">Seekbar/OSDNext.png</texturenofocus>
                         <texturefocus>Seekbar/OSDNext.png</texturefocus>
                         <onclick>PlayerControl(Next)</onclick>
-                    </control>
-                    <control type="button" id="13">
-                        <include>osdbutton</include>
-                        <visible>Player.CanRecord + !Pvr.IsRecording</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDrec.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDrec.png</texturefocus>
-                        <onclick>PlayerControl(Record)</onclick>
-                    </control>
-                    <control type="button" id="14">
-                        <include>osdbutton</include>
-                        <visible>Player.CanRecord + Pvr.IsRecording</visible>
-                        <texturenofocus colordiffuse="dimgray">Seekbar/OSDrecon.png</texturenofocus>
-                        <texturefocus>Seekbar/OSDrecon.png</texturefocus>
-                        <onclick>PlayerControl(Record)</onclick>
                     </control>
                     <control type="button" id="255">
                         <include>osdbutton</include>
