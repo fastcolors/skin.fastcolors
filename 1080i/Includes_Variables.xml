@@ -41,11 +41,6 @@
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
     </variable>
 
-    <variable name="pvrosd" description="pvrOSDchoiche">
-        <value condition="Skin.HasSetting(osdch)">$LOCALIZE[19069]</value>
-        <value >$LOCALIZE[19019]</value>
-    </variable>
-
     <variable name="movieshelf">
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + String.IsEqual(Skin.String(moviesshelf),WL)">special://skin/playlists/inprogress_movies.xsp</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) + String.IsEqual(Skin.String(moviesshelf),RND)">special://skin/playlists/random_movies.xsp</value>
