@@ -8,7 +8,7 @@
             <centerleft>960</centerleft>
             <top>100</top>
             <width>1300</width>
-            <height>720</height>
+            <height>190</height>
             <onleft>Playlist.PlayOffset(-1)</onleft>
             <onright>Playlist.PlayOffset(1)</onright>
             <onup>110</onup>

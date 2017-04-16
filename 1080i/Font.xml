@@ -171,6 +171,11 @@
             <size>500</size>
         </font>
         <font>
+            <name>huge</name>
+            <filename>SanFranciscoHeavy.ttf</filename>
+            <size>700</size>
+        </font>
+        <font>
             <name>XS</name>
             <filename>SanFrancisco.ttf</filename>
             <size>18</size>
