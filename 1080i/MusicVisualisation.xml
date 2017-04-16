@@ -14,10 +14,10 @@
             <randomize>true</randomize>
         </control>
         <control type="image">
-            <left>60</left>
-            <top>60</top>
-            <width>200</width>
-            <height>200</height>
+            <left>100</left>
+            <top>810</top>
+            <width>180</width>
+            <height>180</height>
             <bordertexture border="5">images/White.png</bordertexture>
             <bordersize>5</bordersize>
             <info>MusicPlayer.Cover</info>
